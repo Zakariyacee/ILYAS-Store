@@ -109,3 +109,4 @@ function updateCartTotal() {
   var totall = document.getElementsByClassName("cart-total-price")[0].innerText = "£" + total
   
 }
+
