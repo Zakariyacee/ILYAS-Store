@@ -57,14 +57,14 @@ function addToCart(event) {
     var shopItem = button.parentElement.parentElement
     var title = shopItem.getElementsByClassName('shop-item-title')[0].innerText
     var price = shopItem.getElementsByClassName('shop-item-price')[0].innerText
-    var image = shopItem.getElementsByClassName('shop-item-image')[0].src
+    // var image = shopItem.getElementsByClassName('shop-item-image')[0].src
 
-    console.log(title, price, image)
-  addItemToCart(title, price, image)
+    console.log(title, price)
+  addItemToCart(title, price)
   updateCartTotal()
 }
 
-function addItemToCart(title, price, image) {
+function addItemToCart(title, price) {
   //console.log("heyy")
   var cartRow = document.createElement('div')
   cartRow.classList.add("cart-box")
@@ -80,7 +80,7 @@ function addItemToCart(title, price, image) {
   }
   
   let cartRowContents = `
-    <img src="${image}" alt="image">
+    <img src="" alt="image">
     <div class="cart-text">
       <h3 class="cart-item-title">${title}</h3>
       <span class="cart-price">${price}</span>
